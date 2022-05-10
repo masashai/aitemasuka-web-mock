@@ -16,26 +16,29 @@
   <!-- Read index.js. -->
   <script src="index.js"></script>
 
-  <title>login</title>
+  <title>法人向けログイン</title>
 </head>
 
 <body onLoad="HTML_Load('_header.html','header');">
   <header></header>
   <main>
     <div class="container my-4">
+      <div class="text-center mb-4">
+        <h5>法人向けログイン</h5>
+      </div>
       <div class="d-none alert alert-danger" role="alert">
         ユーザ名とパスワードの組み合わせが間違っています
       </div>
       <div class="input-group mb-3">
-        <input id="username" type="text" class="form-control" placeholder="Username" aria-label="Username">
+        <input id="username" type="text" class="form-control" placeholder="ユーザ名" aria-label="Username">
       </div>
       
       <div class="input-group mb-3">
-        <input id="password" type="text" class="form-control" placeholder="Password" aria-label="Password">
+        <input id="password" type="text" class="form-control" placeholder="パスワード" aria-label="Password">
       </div>
 
       <div class="d-grid gap-2">
-        <button id="login-button" class="btn btn-primary" type="button" onclick="onclick_login_button();">Login</button>
+        <button id="login-button" class="btn btn-primary" type="button" onclick="onclick_login_button();">ログイン</button>
       </div>
     </div>
   </main>
