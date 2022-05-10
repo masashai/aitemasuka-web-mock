@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Use jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Read index.js. -->
+  <script src="index.js"></script>
+
+  <title>空き状況確認</title>
+</head>
+
+<body onLoad="HTML_Load('_header.html','header');">
+  <header></header>
+  <main>
+    <div class="container my-4">
+      <div class="text-center mb-4">
+        <h5>XX月極駐車場の空き状況</h5>
+        <p class="fs-1 text-danger fw-bold">満車</p>
+        <p class="text-danger lh-base rounded bg-light p-3">
+          現時点で空く見込みはありません。
+          <br />
+          空き状況の更新通知を希望の方は
+          <a href="#">こちら</a>
+        </p>
+      </div>
+      <div class="table-responsive">
+        <table class="table small">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">空き状況</th>
+              <th scope="col">賃料（円/月）</th>
+              <th scope="col">空き予定</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td class="text-danger fw-bold">満</td>
+              <td>6,000</td>
+              <td>なし</td>
+              <td><button class="btn btn-primary btn-sm disabled">申し込む</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td class="text-danger fw-bold">満</td>
+              <td>6,000</td>
+              <td>なし</td>
+              <td><button class="btn btn-primary btn-sm disabled">申し込む</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td class="text-danger fw-bold">満</td>
+              <td>6,000</td>
+              <td>なし</td>
+              <td><button class="btn btn-primary btn-sm disabled">申し込む</button></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td class="text-danger fw-bold">満</td>
+              <td>6,000</td>
+              <td>なし</td>
+              <td><button class="btn btn-primary btn-sm disabled">申し込む</button></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td class="text-danger fw-bold">満</td>
+              <td>6,000</td>
+              <td>なし</td>
+              <td><button class="btn btn-primary btn-sm disabled">申し込む</button></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td class="text-danger fw-bold">満</td>
+              <td>6,000</td>
+              <td>なし</td>
+              <td><button class="btn btn-primary btn-sm disabled">申し込む</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-primary" type="button">この駐車場の空き状況更新通知を受け取る</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script>
+    function onclick_login_button() {
+      let username = document.getElementById('username').value;
+      let password = document.getElementById('password').value;
+      if (username == "user" && password == "1234") {
+        location.href = "index.html";
+      } else {
+        var alert = document.querySelector('.alert').classList.remove('d-none');
+      }
+    }
+  </script>
+</body>
+
+</html>
