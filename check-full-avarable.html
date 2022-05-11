@@ -100,23 +100,22 @@
       <div class="d-grid">
         <button class="btn btn-primary" type="button">この駐車場の空き状況更新通知を受け取る</button>
       </div>
+      <div class="my-4">
+        <p class="lh-base">
+          この駐車場に関するお問合せは
+          <a href="#">こちら</a>
+        </p>
+        <p class="lh-base">
+          システムに関するお問合せは
+          <a href="#">こちら</a>
+        </p>
+      </div>
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script>
-    function onclick_login_button() {
-      let username = document.getElementById('username').value;
-      let password = document.getElementById('password').value;
-      if (username == "user" && password == "1234") {
-        location.href = "index.html";
-      } else {
-        var alert = document.querySelector('.alert').classList.remove('d-none');
-      }
-    }
-  </script>
 </body>
 
 </html>
