@@ -13,7 +13,10 @@
   <!-- Read index.js. -->
   <script src="index.js"></script>
 
-  <title>申し込みフォーム</title>
+  <!-- Bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <title>駐車場を追加する</title>
 </head>
 
 <body>
@@ -34,30 +37,15 @@
   <main>
     <div class="container my-4">
       <div class="d-none alert alert-success" role="alert">
-        申し込みが完了しました。入力頂いたメールアドレス宛に確認メールを送信しましたのでご確認ください。
+        駐車場を追加しました。
       </div>
       <div class="text-center mb-4">
-        <h5>申し込みフォーム</h5>
+        <h5>駐車場を追加する</h5>
       </div>
 
-      <p class="lh-base bg-light rounded p-3">
-        駐車場名: XX月極駐車場
-        <br />
-        住所: 福岡県〇〇市△△区7-8-9
-        <br />
-        申し込み区画: No.9
-        <br />
-        賃料: 6,000円
-      </p>
-
-      <h6>名前（漢字）</h6>
+      <h6>名前</h6>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="例: 山田花子" >
-      </div>
-
-      <h6>名前（カナ）</h6>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="例: ヤマダハナコ" >
+        <input type="text" class="form-control" placeholder="例: XX月極駐車場" >
       </div>
 
       <h6>住所</h6>
@@ -65,23 +53,8 @@
         <input type="text" class="form-control" placeholder="例: 福岡県〇〇市△△区1-2-3" >
       </div>
 
-      <h6>電話番号</h6>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="例: 012-345-678" >
-      </div>
-
-      <h6>メールアドレス</h6>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="例: xxx@example.com" >
-      </div>
-
-      <h6>利用開始希望日</h6>
-      <div class="input-group mb-3">
-        <input type="date" class="form-control" >
-      </div>
-
       <div class="d-grid gap-2">
-        <button id="login-button" class="btn btn-primary" type="button" onclick="onclick_login_button();">申し込む</button>
+        <button id="login-button" class="btn btn-primary" type="button" onclick="onclick_create_button();">追加する</button>
       </div>
     </div>
   </main>
@@ -90,8 +63,8 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script>
-    function onclick_login_button() {
-      var alert = document.querySelector('.alert').classList.remove('d-none');
+    function onclick_create_button() {
+      document.querySelector('.alert').classList.remove('d-none');
     }
   </script>
 </body>

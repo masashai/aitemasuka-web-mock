@@ -1,5 +1,3 @@
-<!-- !!!!caution!!!! -->
-<!-- This file is the template. -->
 <!doctype html>
 <html lang="en">
 
@@ -15,7 +13,10 @@
   <!-- Read index.js. -->
   <script src="index.js"></script>
 
-  <title>トップ</title>
+  <!-- Bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <title>駐車場を削除する</title>
 </head>
 
 <body>
@@ -35,50 +36,33 @@
   </nav>
   <main>
     <div class="container my-4">
-      <div class="text-center mb-4">
-        <h5>開発用ページ</h5>
+      <div class="d-none alert alert-danger" role="alert">
+        駐車場を削除しました。
       </div>
-      <ul>
-        <li class="mb-2">
-          <a href="login.html">法人 - ログイン</a>
-        </li>
-        <li class="mb-2">
-          <a href="park-index.html">法人 - 駐車場一覧</a>
-        </li>
-        <li class="mb-2">
-          <a href="park-create.html">法人 - 駐車場追加</a>
-        </li>
-        <li class="mb-2">
-          <a href="park-show.html">法人 - 駐車場詳細</a>
-        </li>
-        <li class="mb-2">
-          <a href="park-edit.html">法人 - 駐車場更新</a>
-        </li>
-        <li class="mb-2">
-          <a href="park-delete.html">法人 - 駐車場削除</a>
-        </li>
-        <li class="mb-2">
-          <a href="check-full.html">一般 - 空き状況 - 満車</a>
-        </li>
-        <li class="mb-2">
-          <a href="check-full-avarable.html">一般 - 空き状況 - 満車(申し込み可)</a>
-        </li>
-        <li class="mb-2">
-          <a href="check-empty.html">一般 - 空き状況 - 空き</a>
-        </li>
-        <li class="mb-2">
-          <a href="form.html">一般 - 申し込みフォーム</a>
-        </li>
-        <li class="mb-2">
-          <a href="mail.html">一般 - 申し込み確認メール</a>
-        </li>
-      </ul>
+      <div class="text-center mb-4">
+        <h5>駐車場を削除する</h5>
+      </div>
+
+      <h6>名前</h6>
+      <p>XX月極駐車場</p>
+
+      <h6>住所</h6>
+      <p>福岡県〇〇市△△区1-2-3</p>
+
+      <div class="d-grid gap-2">
+        <button id="login-button" class="btn btn-danger" type="button" onclick="onclick_create_button();">削除する</button>
+      </div>
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script>
+    function onclick_create_button() {
+      document.querySelector('.alert').classList.remove('d-none');
+    }
+  </script>
 </body>
 
 </html>
