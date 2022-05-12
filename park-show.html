@@ -36,15 +36,12 @@
   </nav>
   <main>
     <div class="container my-4">
-      <div class="d-none alert alert-danger" role="alert">
-        ユーザ名とパスワードの組み合わせが間違っています
-      </div>
       <div class="text-center mb-4">
         <h5>XX月極駐車場</h5>
         <p class="fs-1 text-success fw-bold">空きあり</p>
       </div>
       <div class="my-2">
-        <a href="park-create.html" class="text-decoration-none">区画を追加する</a>
+        <a href="space-create.html" class="text-decoration-none">区画を追加する</a>
       </div>
       <div class="my-2">
         <a href="park-qr.html" class="text-decoration-none">バーコードを印刷する</a>
@@ -52,7 +49,7 @@
       <div class="table-responsive">
         <table class="table text-nowrap">
           <thead>
-            <tr>
+            <tr id="row-1">
               <th scope="col">No</th>
               <th scope="col">空き状況</th>
               <th scope="col">賃料</th>
@@ -63,8 +60,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
+            <tr id="row-1">
+              <th scope="row" id="row-1">1</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-danger fw-bold">満</span> <span class="text-light fw-bold">空</span></button></td>
               <td>6,000</td>
               <td>6,000</td>
@@ -72,12 +69,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-2">
               <th scope="row">2</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -86,12 +84,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-3">
               <th scope="row">3</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -100,12 +99,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-4">
               <th scope="row">4</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -114,12 +114,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-5">
               <th scope="row">5</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -128,12 +129,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-6">
               <th scope="row">6</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -142,12 +144,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-7">
               <th scope="row">7</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -156,12 +159,13 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
-            <tr>
+            <tr id="row-8">
               <th scope="row">8</th>
               <td><button class="btn border" onclick="onclick_switch_button(this);"><span class="text-light fw-bold">満</span> <span class="text-success fw-bold">空</span></button></td>
               <td>6,000</td>
@@ -170,8 +174,9 @@
               <td>保証料</td>
               <td>
                 <ul class="list-group list-group-horizontal">
-                  <li class="list-group-item"><a href="park-edit.html"><i class="bi bi-pencil-square"></i></a></li>
-                  <li class="list-group-item"><a href="park-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
+                  <li class="list-group-item"><a href="space-copy.html"><i class="bi bi-files"></i></a></li>
+                  <li class="list-group-item"><a href="space-edit.html"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="list-group-item"><a href="space-delete.html"><i class="bi bi-x-circle-fill"></i></a></li>
                 </ul>
               </td>
             </tr>
