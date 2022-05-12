@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Read index.js. -->
+  <script src="index.js"></script>
+
+  <title>申し込みフォーム編集</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">aitemasuka</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">法人向けログイン</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container my-4">
+      <div class="d-none alert alert-success" role="alert">
+        編集しました。<br />編集後のフォームは<a href="form.html">こちら</a>から確認ください。
+      </div>
+      <div class="text-center mb-4">
+        <h5>申し込みフォーム編集</h5>
+      </div>
+
+      <div class="my-3 p-2 rounded border">
+        <h6>項目名</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" value="名前（漢字）" >
+        </div>
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="flexSwitchCheckDefault">必須</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
+      </div>
+
+      <div class="my-3 p-2 rounded border">
+        <h6>項目名</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" value="名前（カナ）" >
+        </div>
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="flexSwitchCheckDefault">必須</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
+      </div>
+
+      <div class="my-3 p-2 rounded border">
+        <h6>項目名</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" value="電話番号" >
+        </div>
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="flexSwitchCheckDefault">必須</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
+      </div>
+
+      <div class="my-3 p-2 rounded border">
+        <h6>項目名</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" value="メールアドレス" >
+        </div>
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="flexSwitchCheckDefault">必須</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
+      </div>
+
+      <div class="d-grid gap-2">
+        <button id="login-button" class="btn btn-primary" type="button" onclick="onclick_login_button();">更新する</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script>
+    function onclick_login_button() {
+      var alert = document.querySelector('.alert').classList.remove('d-none');
+    }
+  </script>
+</body>
+
+</html>
